@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.siedebarr{
+  min-height: 100vh;
+  width: 250px;
+  background-color: rgba(22, 147, 163, 0.846);
+font-size: 23px;
+font-family:"Sansation", sans-serif;
+  font-weight: 300;
+  font-style: normal;;
+}
+
+
+.statscont{
+  display: flex;
+}
+.cardfolder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  padding: 1rem;
+}
+
+.cardcontainer {
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.cardbody {
+  margin-bottom: 0.6rem;
+}
+
+.cardtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.statscont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.cardtext {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cardlink {
+  font-size: 0.85rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.chart-wrapper{
+  width: 100%;
+  height: 400px;
+  padding: 1rem;
+  background-color: rgba(253, 231, 231, 0.765);
+  border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+:root {
+  --new-line-color: #00c49f;
+  --old-line-color: #8884d8;
+}
+
+.sidebarr {
+  position: relative;
+  min-height: 100vh;
+  background-color: #40405c; /* example color */
+  padding: 1rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .sidebarr {
+    width: 100%;
+  }
+}
+
+/* Prevent dropdown from breaking out */
+.sidebarr .dropdown-menu {
+  position: static;
+  float: none;
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding-left: 1rem;
+}
+.sidebar {
+  position: relative;
+  width: 250px; /* or whatever your sidebar width is */
+}
+
