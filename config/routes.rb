@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :accounts,  only: [:index, :create]
+  resources :stocks, only: [:index, :create]
+  resources :patients, only: [:index, :create]
   resources :dashboards
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -4,9 +4,13 @@ import Home from './Components/Home';
 import Sidebar from './Components/SIdebar';
 import Patient from './Components/Patient';
 import ChartComponent from './Components/ChartComponent';
-
-
-
+import AddPatient from './Components/AddPatient';
+import Calender from './Components/Calender';
+import AddStock from './Components/AddStock';
+import AllStock from './Components/AllStock';
+import AllIncome from './Components/AllIncome';
+import AllExpenses from './Components/AllExpenses'
+import AddAccount from './Components/AddAccount';
 function App() {
   return (
     <div className="App">
@@ -16,10 +20,20 @@ function App() {
      <div className='main-content' style={{ flexGrow: 1, padding: "20px"}}>
        <Routes>
       <Route path='/' element={<Home />}></Route>
-       <Route path='/patients' element={<Patient />}></Route>
+       <Route path='/allpatients' element={<Patient />}></Route>
       <Route path='/' element={<Home />}></Route>
-      <Route path='/' element={<Home />}></Route>
+      <Route path='/addpatients' element={<AddPatient />}></Route>
       <Route path='/chart' element={<ChartComponent />}></Route>
+      <Route path='/calender' element={<Calender />}></Route>
+      <Route path='/allstock' element={<AllStock />}></Route>
+      <Route path='/k' element={<AddStock />} />
+   <Route path='/allincome' element={<AllIncome />}></Route>
+      <Route path='/allexpenses' element={<AllExpenses />}></Route>
+      <Route path='/addaccounts' element={<AddAccount />}></Route>
+   
+
+
+
     </Routes>
      </div>
     

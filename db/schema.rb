@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_08_02_145723) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_13_072429) do
+  create_table "accounts", force: :cascade do |t|
+    t.string "record_type"
+    t.integer "date"
+    t.string "category"
+    t.integer "amount"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "dashboards", force: :cascade do |t|
     t.string "name"
     t.string "gender"
@@ -18,6 +28,29 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_02_145723) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.integer "pnumber"
+    t.string "operation"
+    t.string "payment"
+    t.integer "howmuch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "gender"
+    t.string "phone"
+  end
+
+  create_table "stocks", force: :cascade do |t|
+    t.string "itemname"
+    t.integer "quantity"
+    t.integer "price"
+    t.integer "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "category"
   end
 
 end
