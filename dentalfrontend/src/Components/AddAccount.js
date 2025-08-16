@@ -14,6 +14,23 @@ function AddAccount() {
     amount: "",
     description: "",
   });
+  const categories = {
+  income: [
+    "Consultation",
+    "Surgery",
+    "Laboratory",
+    "Pharmacy",
+    "Inpatient Services"
+  ],
+  expense: [
+    "Salaries",
+    "Medical Supplies",
+    "Equipment Maintenance",
+    "Utilities",
+    "Rent & Maintenance"
+  ]
+};
+
 
   const handleChange = (e)=> {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -111,14 +128,21 @@ navigate('/allexpenses')
         />
 
         <label>Category:</label>
-        <input
-         name='category'
-          type="text"
-          placeholder="e.g. Consultation, Materials"
-          value={formData.category}
-          onChange={handleChange}
-          required
-        />
+        console.log("FormData before render:", formData);
+
+        <select
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+            required
+          >
+            <option value="">-- Select Category --</option>
+            {categories[formData.record_type]?.map((cat, index) => (
+              <option key={index} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
 
         <label>Amount (KES):</label>
         <input

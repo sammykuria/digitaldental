@@ -3,6 +3,7 @@ import ChartComponent from './ChartComponent'
 import StatCard from './StatCard'
 import AllStock from './AllStock';
 import Patients from './Patient'
+import Calender from './Calender'
 const statData = [
  { title: "Today's Summary", label: 'Appointments', value: 200, link: '#' },
   { title: "New Patients", label: 'Patients', value: 85, link: '#' },
@@ -53,6 +54,7 @@ function Home() {
 
                   <div className='homeChart'>
                       <ChartComponent />
+                      <Calender />
                   </div>
 
           </div>

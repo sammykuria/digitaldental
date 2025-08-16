@@ -1,7 +1,17 @@
 import React, { useState} from 'react'
+
 import {
-  LineChart,Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from "recharts";
+
+
 
  const dataOptions = {
         daily: [
@@ -59,18 +69,19 @@ function ChartComponent() {
      
      <div className='chart-wrapper'>
   <ResponsiveContainer>
-        <LineChart data={data}>
+        <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
 
-           <Area type="monotone"  fill="url(#colorNew)" />
-          <Area type="monotone" fill="url(#colorOld)" />
-            <Line type="monotone" dataKey="newPatients" stroke="var(--new-line-color)" strokeWidth={2} dot />
-          <Line type="monotone" dataKey="oldPatients" stroke="var(--old-line-color)" strokeWidth={2} dot />
-        </LineChart>
+          {/* Bars */}
+          <Bar dataKey="newPatients"  fill="#4CAF50" />
+          <Bar dataKey="oldPatients" fill="#FF5722" />
+
+       
+        </BarChart>
       </ResponsiveContainer>
      </div>
     

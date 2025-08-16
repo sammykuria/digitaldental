@@ -66,7 +66,7 @@ fetch(`http://127.0.0.1:4000/accounts/${id}`, {
       
       <div className='rodeo'>
        
-          <Link className='addinv' to='/k'>
+          <Link className='addinv' to='/addaccounts'>
             + Add inventory
           </Link>
           
@@ -90,8 +90,8 @@ fetch(`http://127.0.0.1:4000/accounts/${id}`, {
         <tbody>
           {income.map((item, index) => (
             <tr key={index}>
-              <td>{new Date(item.date).toLocaleDateString()}</td>
-              <td>{item.category.name}</td>
+              <td>{item.date}</td>
+              <td>{item.category}</td>
               <td>{item.amount}</td>
               <td>{item.description}</td>
           
@@ -118,7 +118,7 @@ fetch(`http://127.0.0.1:4000/accounts/${id}`, {
       
       <div className='rodeo'>
        
-          <Link className='addinv' to='/k'>
+          <Link className='addinv' to='/addaccounts'>
             + Add inventory
           </Link>
           
@@ -144,8 +144,8 @@ fetch(`http://127.0.0.1:4000/accounts/${id}`, {
         <tbody>
           {expenses.map((item, index) => (
             <tr key={index}>
-              <td>{new Date(item.date).toLocaleDateString()}</td>
-              <td>{item.category.name}</td>
+              <td>{item.date}</td>
+              <td>{item.category}</td>
               <td>{item.amount}</td>
               <td>{item.description}</td>
             
