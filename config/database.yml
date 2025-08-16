@@ -17,11 +17,19 @@ development:
   host: localhost
   port: 5432
 
-
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: digitaldental_test
+  username: jupita
+  password: jupita123d
+  host: localhost
+  port: 5432
 
 production:
-  <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
+
+
+  # postgresql://digital_dental_user:ZEQ01nISkVQLeahn95zZO54XbMmKpPme@dpg-d2g653ndiees73d4eaq0-a/digital_dental
+
