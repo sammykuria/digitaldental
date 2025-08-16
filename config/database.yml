@@ -28,7 +28,14 @@ test:
 
 production:
   adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  encoding: unicode
+  database: digitaldental_production
+  username: jupita
+  password: jupita123d
+  host: localhost
+  port: 5432
+  pool: 5
+
 
   # postgresql://digital_dental_user:ZEQ01nISkVQLeahn95zZO54XbMmKpPme@dpg-d2g653ndiees73d4eaq0-a/digital_dental
 
