@@ -42,7 +42,7 @@ function ChartComponent() {
     }
 
   return (
-   <div style={{ width: '100%', height: 300 }}>
+   <div className='chartme' style={{ width: '60%', height: 300 }}>
      
 
      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>

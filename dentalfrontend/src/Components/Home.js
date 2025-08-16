@@ -1,8 +1,8 @@
 import React from 'react'
 import ChartComponent from './ChartComponent'
 import StatCard from './StatCard'
-
-
+import AllStock from './AllStock';
+import Patients from './Patient'
 const statData = [
  { title: "Today's Summary", label: 'Appointments', value: 200, link: '#' },
   { title: "New Patients", label: 'Patients', value: 85, link: '#' },
@@ -14,7 +14,27 @@ function Home() {
   return (
     <div>
       <div className='dashboard'>
-        <h2>Dashboard</h2>
+
+        <div className='jupitaboss'>
+          <div>
+            <h3><h2>Dashboard</h2></h3>
+          </div>
+           <div className='itslife'>
+            <i id='life' className="fa-solid fa-magnifying-glass"></i>
+            <input
+            // value={searchTerm}
+            // onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder='Search inventory'></input>
+          </div>
+          <div className='truelove'>
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+              <p>User</p>
+            </div>
+          </div>
+
+        </div>
+        
 
 
     <div className='cardfolder'>
@@ -35,7 +55,16 @@ function Home() {
                       <ChartComponent />
                   </div>
 
+          </div>
 
+
+          <div className='tooeasy'>
+            <div className='hustle'>
+              <Patients />
+            </div>
+            <div className='motivate'>
+              <AllStock />
+            </div>
           </div>
     </div>
     </div>

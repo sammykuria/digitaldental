@@ -18,7 +18,7 @@ class StocksController < ApplicationController
     @stock = Stock.new(stock_params)
 
     if @stock.save
-      render json: @stock, status: :created, location: @stock
+      render json: @stock, status: :created
     else
       render json: @stock.errors, status: :unprocessable_entity
     end

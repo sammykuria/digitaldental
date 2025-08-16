@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
+
+
 // const paginationModel = { pquantity: 0, pquantitySize: 10 };
 function AllStock() {
 
@@ -10,6 +12,7 @@ function AllStock() {
 fetch('http://127.0.0.1:4000/stocks')
   .then(res => res.json())
   .then(data => {
+    
     if (Array.isArray(data)) {
       const formattedData = data.map(stock => ({
         ...stock,
@@ -23,6 +26,7 @@ fetch('http://127.0.0.1:4000/stocks')
     } else {
       console.error("Unexpected data format:", data);
     }
+      
   })
   .catch(e => console.log('error fetching stocks:', e));
 
@@ -52,7 +56,7 @@ fetch('http://127.0.0.1:4000/stocks')
       <div className='headerinput'>
          <h2 className='liveheader'>📦 Live Stock report</h2>
          <div className='itslife'>
-          <i id='life' class="fa-solid fa-magnifying-glass"></i>
+          <i id='life' className="fa-solid fa-magnifying-glass"></i>
           <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -69,7 +73,7 @@ fetch('http://127.0.0.1:4000/stocks')
           </button>
           <div>
             <button className='addinv'> 
-              <i class="fa-solid fa-download"></i>
+              <i className="fa-solid fa-download"></i>
               Download(PDF)</button>
           </div>
       </div>

@@ -35,7 +35,9 @@ class AccountsController < ApplicationController
 
   # DELETE /accounts/1
   def destroy
-    @account.destroy!
+    @account = Account.find(params[:id])
+   @account.destroy!
+    head :no_content
   end
 
   private

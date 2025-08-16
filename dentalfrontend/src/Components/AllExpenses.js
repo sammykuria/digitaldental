@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom'
 function AllIncome() {
   const [income, setIncome] = useState([])
   const [expenses, setExpenses] =useState([])
-  const[searchTerm, setSearchTerm] =useState('')
 
    useEffect(() => {
     fetch("http://127.0.0.1:4000/accounts")
@@ -30,6 +29,25 @@ function AllIncome() {
   }, []);
 
 
+  function handleDelete (id,type) {
+fetch(`http://127.0.0.1:4000/accounts/${id}`, {
+  method: 'DELETE',
+})
+  .then((res) => {
+      if (res.ok) {
+        if (type === "expense") {
+          setExpenses((prev) => prev.filter((item) => item.id !== id));
+        } else if (type === "income") {
+          setIncome((prev) => prev.filter((item) => item.id !== id));
+        }
+      } else {
+        console.error("Failed to delete account");
+      }
+    })
+    .catch((err) => console.error("Delete error:", err));
+}
+
+
 
   
   return (
@@ -47,14 +65,14 @@ function AllIncome() {
 
       
       <div className='rodeo'>
-        <button className='addinv' >
-          <Link to='/k'>
+       
+          <Link className='addinv' to='/k'>
             + Add inventory
           </Link>
-          </button>
+          
           <div>
             <button className='addinv'> 
-              <i class="fa-solid fa-download"></i>
+              <i className="fa-solid fa-download"></i>
               Download(PDF)</button>
           </div>
       </div>
@@ -66,15 +84,22 @@ function AllIncome() {
             <th>Category</th>
             <th>Amount (KES)</th>
             <th>Description</th>
+             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
           {income.map((item, index) => (
             <tr key={index}>
-              <td>{item.date}</td>
-              <td>{item.category}</td>
+              <td>{new Date(item.date).toLocaleDateString()}</td>
+              <td>{item.category.name}</td>
               <td>{item.amount}</td>
               <td>{item.description}</td>
+          
+             <td>
+              <button className='mic' onClick={() => handleDelete(item.id, "income")}>  ❌</button>
+            </td>
+          
+            
             </tr>
           ))}
         </tbody>
@@ -92,14 +117,14 @@ function AllIncome() {
 
       
       <div className='rodeo'>
-        <button className='addinv' >
-          <Link to='/k'>
+       
+          <Link className='addinv' to='/k'>
             + Add inventory
           </Link>
-          </button>
+          
           <div>
             <button className='addinv'> 
-              <i class="fa-solid fa-download"></i>
+              <i className="fa-solid fa-download"></i>
               Download(PDF)</button>
           </div>
       </div>
@@ -113,15 +138,22 @@ function AllIncome() {
             <th>Category</th>
             <th>Amount (KES)</th>
             <th>Description</th>
+           <th>Delete</th>
           </tr>
         </thead>
         <tbody>
           {expenses.map((item, index) => (
             <tr key={index}>
-              <td>{item.date}</td>
-              <td>{item.category}</td>
+              <td>{new Date(item.date).toLocaleDateString()}</td>
+              <td>{item.category.name}</td>
               <td>{item.amount}</td>
               <td>{item.description}</td>
+            
+          
+            <td>
+              <button className='mic' onClick={() => handleDelete(item.id, "expense")}>  ❌</button>
+            </td>
+            
             </tr>
           ))}
         </tbody>

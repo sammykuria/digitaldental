@@ -40,7 +40,9 @@ class PatientsController < ApplicationController
 
   # DELETE /patients/1
   def destroy
+    patient = Patient.find(params[:id])
     @patient.destroy!
+    head :no_content
   end
 
   private

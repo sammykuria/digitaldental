@@ -38,11 +38,8 @@ function AddAccount() {
   .then(data => {
     console.log('Account created', data)
      alert('Accounts added successfully.');
-
-       setTimeout(() => {
-    navigate('/allexpenses');
-  }, 5000); // 1000ms = 1 second
-    })
+navigate('/allexpenses')    
+  })
   .catch(error =>{
     console.error('There was a problem with fecth', error)
   })

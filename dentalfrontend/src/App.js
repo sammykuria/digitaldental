@@ -8,7 +8,6 @@ import AddPatient from './Components/AddPatient';
 import Calender from './Components/Calender';
 import AddStock from './Components/AddStock';
 import AllStock from './Components/AllStock';
-import AllIncome from './Components/AllIncome';
 import AllExpenses from './Components/AllExpenses'
 import AddAccount from './Components/AddAccount';
 function App() {
@@ -27,13 +26,9 @@ function App() {
       <Route path='/calender' element={<Calender />}></Route>
       <Route path='/allstock' element={<AllStock />}></Route>
       <Route path='/k' element={<AddStock />} />
-   <Route path='/allincome' element={<AllIncome />}></Route>
       <Route path='/allexpenses' element={<AllExpenses />}></Route>
       <Route path='/addaccounts' element={<AddAccount />}></Route>
    
-
-
-
     </Routes>
      </div>
     

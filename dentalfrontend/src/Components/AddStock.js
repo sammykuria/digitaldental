@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
+import { useNavigate} from 'react-router-dom'
+
 
 function AddStock() {
 
+  const navigate = useNavigate()
 
     const [stockData,setStockData] = useState({
 
@@ -31,6 +34,8 @@ function AddStock() {
   })
   .then(data => {
     console.log('Patient created', data)
+     alert('Accounts added successfully.');
+navigate('/allexpenses') 
   })
   .catch(error =>{
     console.error('There was a problem with fecth', error)

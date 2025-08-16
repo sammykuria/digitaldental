@@ -11,19 +11,21 @@ function Sidebar() {
       <ul className="nav flex-column">
 
       
+      <div className='juicwrld'>
+        <p>MAIN</p>
+      </div>
          
         <li className="nav-item">
-  <div className='iconcontainer'>
+          <div className='iconcontainer'>
              
-                <Link className="nav-link text-white bg-grey"
-          id='oj'
-          to="/"
-         
-           >
-          DashBoard
-          </Link>
-            </div>  
-                  </li>
+             <Link className="nav-link text-white bg-grey"
+                id='oj'
+                to="/"
+                >
+                DashBoard
+                </Link>
+           </div>  
+          </li>
 
        
          <li className="nav-item">
@@ -104,18 +106,38 @@ function Sidebar() {
 
 
 
+        <div className='juicwrld'>
+          <p>CATALOG</p>
+        </div>
 
-
-
-        <li className="nav-item">
+         <li className="nav-item">
           <Link id='oj' className="nav-link text-white" to="/reports">
-          Reports
+          Doctors
           </Link>
          
         </li>
         <li className="nav-item">
-          <Link id='oj' className="nav-link text-white" to="/settings">Settings</Link>
+          <Link id='oj' className="nav-link text-white" to="/settings">Staff</Link>
         </li>
+
+         <div className='juicwrld'>
+          <p>HELP & SETTINGS</p>
+        </div>
+
+
+         <li className="nav-item">
+          <Link id='oj' className="nav-link text-white" to="/settings">
+          Settings
+          </Link>
+         
+        </li>
+        <li className="nav-item">
+          <Link id='oj' className="nav-link text-white" to="/help">Help Centre</Link>
+        </li>
+
+
+
+
       </ul>  
 
     </div>

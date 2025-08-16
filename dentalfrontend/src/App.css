@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 .siedebarr{
-  min-height: 100vh;
-  width: 250px;
+ height: 100vh;
+  width: 320px;
   background-color: rgba(22, 147, 163, 0.846);
 font-size: 25px;
-font-family:"Sansation", sans-serif;
   font-weight: 300;
-  font-style: normal;;
+  font-style: normal;
 }
+.app-container {
+  display: flex;
+  height: 100%; /* Full viewport height */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;}
 
 
 .statscont{
@@ -78,12 +86,8 @@ font-family:"Sansation", sans-serif;
   --old-line-color: #8884d8;
 }
 
-.sidebarr {
-  position: relative;
-  min-height: 100vh;
-  background-color: #40405c; /* example color */
-  padding: 1rem;
-}
+
+
 
 /* Responsive behavior */
 @media (max-width: 768px) {
@@ -101,7 +105,7 @@ font-family:"Sansation", sans-serif;
   padding-left: 1rem;
 }
 #oj{
-  font-size: 18px;
+  font-size: 16px;
 }
 .iconcontainer{
   display: flex;
@@ -264,24 +268,46 @@ font-size: 18px;
   padding: 0rem;
 }
 
+.mic{
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+}
+.juicwrld p{
+  font-size: 13px;
+}
+.juicwrld {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  text-align: center;
+}
 .nav-item {
  position: relative; /* This anchors the dropdown absolutely inside it */
-  margin-bottom: 20px; /* space between each li */
-  padding:2px;
+  margin-bottom: 25px; /* space between each li */
+  padding:1px;
   border-radius: 10px;
-  background-color: rgba(37, 141, 136, 0.451);
+  background-color: rgba(37, 141, 136, 0.175);
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.564);
 }
-  /* .nav-item:active{
-  background-color: rgba(255, 255, 255, 0.25);
-   transform: scale(0.98);
-  } */
+
     .nav-item:hover{
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(41, 61, 66, 0.496);
     transform: translateX(1);
     border-radius: 10px;
   }
-
+  .jupitaboss{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+  }
+.truelove{
+  display: flex;
+  gap: 0.5rem;
+}
+.truelove i{
+  font-size: 25px;
+}
 
 @keyframes fadeIn {
     from {
@@ -602,6 +628,18 @@ font-size: 18px;
     .rodeo{
       display: flex;
       gap: 2rem;
+    }
+
+    .tooeasy{
+      display: flex;
+    }
+
+    .secondtabhome{
+      
+    }
+    .chartme{
+margin-bottom: 12%;
+margin-top: 4%;
     }
 
     
