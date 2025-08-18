@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Link} from 'react-router-dom'
+import API_BASE_URL from "../config";
 
 
 
@@ -11,7 +12,7 @@ function Patient() {
     
 
     useEffect(() => {
-      fetch('https://digitaldental.onrender.com/patients')
+      fetch(`${API_BASE_URL}/patients`)
       .then(res => res.json())
          .then(data => {
         // If backend returns an object, adjust accordingly
