@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
+const API_BASE = "https://digitaldental.onrender.com";
 
 
 
@@ -11,7 +12,7 @@ function AllIncome() {
   const [expenses, setExpenses] =useState([])
 
    useEffect(() => {
-    fetch("https://digitaldental.onrender.com/accounts")
+    fetch(`${API_BASE}/accounts`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

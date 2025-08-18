@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
+const API_BASE = "https://digitaldental.onrender.com";
 
 
 // const paginationModel = { pquantity: 0, pquantitySize: 10 };
@@ -9,7 +10,8 @@ function AllStock() {
   const[searchTerm, setSearchTerm] =useState('')
 
   useEffect(() => {
-fetch('https://digitaldental.onrender.com/stocks')
+          console.log("Using API Base URL:", API_BASE);
+fetch(`${API_BASE}/stocks`)
   .then(res => res.json())
   .then(data => {
     
