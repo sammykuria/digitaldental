@@ -21,7 +21,7 @@ function AddStock() {
 
   const handleSubmit = (e)=>{
   e.preventDefault()
-  fetch("http://127.0.0.1:4000/stocks", {
+  fetch("https://digitaldental.onrender.com/stocks", {
     method:'POST',
     body: JSON.stringify({ stock: stockData}),
     headers: { 'Content-type': 'application/json; charset=UTF-8' }

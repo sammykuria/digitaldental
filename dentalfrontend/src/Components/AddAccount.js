@@ -38,7 +38,7 @@ function AddAccount() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
- fetch("http://127.0.0.1:4000/accounts", {
+ fetch("https://digitaldental.onrender.com/accounts", {
     method:'POST',
    body: JSON.stringify({ account: formData, }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' }

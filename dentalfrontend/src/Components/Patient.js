@@ -11,7 +11,7 @@ function Patient() {
     
 
     useEffect(() => {
-      fetch('http://127.0.0.1:4000/patients')
+      fetch('https://digitaldental.onrender.com/patients')
       .then(res => res.json())
          .then(data => {
         // If backend returns an object, adjust accordingly

@@ -16,7 +16,7 @@ function AddPatient() {
 
 const handleSubmit = (e)=>{
   e.preventDefault()
-  fetch("http://127.0.0.1:4000/patients", {
+  fetch("https://digitaldental.onrender.com/patients", {
     method:'POST',
     body: JSON.stringify({ patient: formData}),
     headers: { 'Content-type': 'application/json; charset=UTF-8' }

@@ -11,7 +11,7 @@ function AllIncome() {
   const [expenses, setExpenses] =useState([])
 
    useEffect(() => {
-    fetch("http://127.0.0.1:4000/accounts")
+    fetch("https://digitaldental.onrender.com/accounts")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

@@ -9,7 +9,7 @@ function AllStock() {
   const[searchTerm, setSearchTerm] =useState('')
 
   useEffect(() => {
-fetch('http://127.0.0.1:4000/stocks')
+fetch('https://digitaldental.onrender.com/stocks')
   .then(res => res.json())
   .then(data => {
     
