@@ -12,7 +12,7 @@ function Patient() {
     
 
     useEffect(() => {
-      console.log("Using API Base URL:", API_BASE_URL);
+      console.log("Using API Base URL:", API_BASE);
       fetch(`${API_BASE}/patients`)
       .then(res => res.json())
          .then(data => {
