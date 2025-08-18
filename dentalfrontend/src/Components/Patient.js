@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Link} from 'react-router-dom'
-import API_BASE_URL from "../config";
+const API_BASE = "https://digitaldental.onrender.com";
 
 
 
@@ -13,7 +13,7 @@ function Patient() {
 
     useEffect(() => {
       console.log("Using API Base URL:", API_BASE_URL);
-      fetch(`${API_BASE_URL}/patients`)
+      fetch(`${API_BASE}/patients`)
       .then(res => res.json())
          .then(data => {
         // If backend returns an object, adjust accordingly
@@ -36,7 +36,7 @@ function Patient() {
 
 
 function handleDelete (id) {
-fetch(`http://127.0.0.1:4000/patients/${id}`, {
+fetch(`https://digitaldental.onrender.com/patients/${id}`, {
   method: 'DELETE',
 })
    .then(res => {
