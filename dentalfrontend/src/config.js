@@ -5,5 +5,9 @@ if (process.env.NODE_ENV === "production") {
 } else {
   API_BASE_URL = "http://127.0.0.1:4000"; // local dev backend
 }
+  
+console.log("API_BASE_URL:", API_BASE_URL);
+
+
 
 export default API_BASE_URL;
