@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 function AddPatient() {
   const [formData, setFormData] = useState({
     name:"",
@@ -9,6 +11,7 @@ function AddPatient() {
     payment:'',
     howmuch:''
   })
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -29,6 +32,8 @@ const handleSubmit = (e)=>{
   })
   .then(data => {
     console.log('Patient created', data)
+       alert('Patients added successfully.');
+navigate('/patients') 
   })
   .catch(error =>{
     console.error('There was a problem with fecth', error)

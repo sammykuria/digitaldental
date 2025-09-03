@@ -30,8 +30,8 @@ function Patient() {
 
 
         const filteredPatients = patients.filter(stock =>
-  (stock.name || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
-  (stock.operation || "").toLowerCase().includes(searchTerm.toLowerCase())
+  (patients.name || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
+  (patients.operation || "").toLowerCase().includes(searchTerm.toLowerCase())
 );
 
 
